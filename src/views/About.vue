@@ -22,6 +22,8 @@
         </template>
       </el-table-column>
     </el-table>
+
+    <div id="myChart" :style="{width: '300px', height: '300px'}"></div>
   </div>
 </template>
 
