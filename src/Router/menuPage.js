@@ -11,7 +11,7 @@ export default [{
     title:'',
     component:Home,
     children:[{
-        path:'about',
+        path:'about1',
         name:'about1',
         title:'',
         component:()=>import('@/views/About.vue'),
@@ -22,7 +22,7 @@ export default [{
     title:'',
     component:Home,
     children:[{
-        path:'echarts',
+        path:'echarts1',
         name:'echarts1',
         title:'',
         component:()=>import('@/views/echarts.vue')

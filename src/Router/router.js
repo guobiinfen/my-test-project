@@ -3,8 +3,13 @@
 import index from "@/views/index.vue";
 import menuPage from "../Router/menuPage";
 
-export const indexPage={
+export const rootPage={
   path:'/',
+  name:'root',
+  redirect: 'index',
+}
+export const indexPage={
+  path:'/index',
   name:'index',
   meta:{
     title:'首页'
@@ -26,6 +31,7 @@ export const menuRouter=menuPage
 
 
 export const routes=[
+  rootPage,
   indexPage,
   login,
   ...menuRouter

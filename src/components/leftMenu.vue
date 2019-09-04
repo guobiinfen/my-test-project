@@ -2,13 +2,10 @@
     <div class="left-menu" style="height:100%;">
         <div class="logo" style="height: 64px;display: block;">LOGO</div>
         <div class="menu" style="height:calc(100% - 64px);overflow-y:scroll;">
-                <Menu width="auto" theme="dark" >
-               
-                        <router-link to="/about/about">about</router-link>
-                        <router-link to="/echarts/echarts">Echarts</router-link>
+                <Menu width="200" theme="dark" accordion >
                     <Submenu name="1">
                         <template slot="title">
-                                <router-link to="/home"> <Icon type="ios-paper" /> 内容管理</router-link> 
+                                <router-link to="/home"> <Icon size='30' type="ios-paper" /> <span class="title-text">内容管理</span></router-link> 
                            
                         </template>
                         <MenuItem name="1-1">文章管理</MenuItem>
@@ -17,14 +14,16 @@
                     </Submenu>
                     <Submenu name="2">
                         <template slot="title">
-                            <Icon type="ios-people" /> 用户管理
+                             <router-link to="/about/about1"><Icon size='30' type="ios-people" /> <span class="title-text">账户管理</span></router-link> 
+                          
                         </template>
                         <MenuItem name="2-1">新增用户</MenuItem>
                         <MenuItem name="2-2">活跃用户</MenuItem>
                     </Submenu>
                     <Submenu name="3">
                         <template slot="title">
-                            <Icon type="ios-stats" /> 统计分析
+                            <router-link to="/echarts/echarts1"> <Icon size='30' type="ios-stats" />  <span class="title-text">统计分析</span></router-link> 
+                           
                         </template>
                         <MenuGroup title="使用">
                             <MenuItem name="3-1">新增和启动</MenuItem>
@@ -45,12 +44,18 @@
 
     export default {
         name: "leftMenu",
+        data(){
+            return{
+               
+            }
+        },
         components: {
         }
     };
 </script>
 
-<style  scoped lang="less">
+<style type="text/less" scoped lang="less">
+    
     .left-menu{
         overflow: hidden;
         .logo{
